@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="settings">
+            <label for="nameInput">Enter your name:</label>
+            <input type="text" id="nameInput" placeholder="Your Name">
+            <select id="backgroundSelect">
+                <option value="1">Blue</option>
+                <option value="2">Green</option>
+                <option value="3">Yellow</option>
+                <option value="4">Pink</option>
+                <option value="5">Gray</option>
+            </select>
+            <button id="toggleMusicBtn">Toggle Music</button>
+        </div>
+        <div id="chatLog" class="chat-log"></div>
+        <div class="input-area">
+            <input type="text" id="messageInput" placeholder="Type a message">
+            <button id="sendMessageBtn">Send</button>
+        </div>
+        <audio id="bgMusic" loop>
+            <source src="SonicChill.mp3" type="audio/mp3">
+        </audio>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
